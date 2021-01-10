@@ -1,17 +1,18 @@
 <!DOCTYPE HTML>
 <html lang="ja">
 	<head>
-		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue@next"></script>
+		<title>Hello vue</title>
 	</head>
 	<body>
 		<div id="app">
-			{{ message }}
-			{{ count }}
-			<ul id>
-				<li v-for="elm in list" display="none">
-					{{elm.id}}
+			{{message}}
+  			{{count}}
+			<ol>
+				<li v-for="elm in todos">
+					{{elm.text}}
 				</li>
-			</ul>
+			</ol>
 			<button v-on:click="countup">+1</button>
 		</div>
 		<script src="./index.js"></script>

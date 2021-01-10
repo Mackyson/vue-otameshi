@@ -1,16 +1,20 @@
-var app = new Vue({
-	el: '#app',
-	data: {
-		message: 'Hello',
-		count: 0,
-		list:[
-			{id: 1},
-			{id: 2},
-		]
+const App = {
+	data() {
+		return {
+			count: 0,
+			message: "Hello",
+			todos:[
+				{id: 0, text:"a"},
+				{id: 1, text:"b"}
+			]
+		}
 	},
-	methods:{
+	methods :{
 		countup: function(){
 			this.count++
 		}
 	}
-})
+}
+app = Vue.createApp(App)
+
+app.mount("#app")
