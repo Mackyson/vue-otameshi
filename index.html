@@ -1,27 +1,28 @@
 <!DOCTYPE HTML>
 <html lang="ja">
 	<head>
-		<script src="https://unpkg.com/vue@next"></script>
 		<title>Hello vue</title>
+		<script src="./node_modules/vue/dist/vue.global.js"></script>
 	</head>
 	<body>
 		<div id="app">
 			{{message}}
-  			{{count}}
+			{{count}}
 			<ol>
 				<li v-for="elm in todos">
 					{{elm.text}}
 				</li>
 			</ol>
-			<button v-on:click="countup">+1</button>
-			<ul>
-				<todo-item
-					v-for="elm in todos"
-					v-bind:todo=elm
-					v-bind:key=elm.id
-					></todo-item>
-			</ul>
+			<button @click="countup">+1</button>
+			<ol>
+				<todo-list
+					v-for="item in todos"
+					:todo="item"
+					:key="item.id"
+					></todo-list>
+			</ol>
 		</div>
 		<script src="./index.js"></script>
 	</body>
+
 </html>
