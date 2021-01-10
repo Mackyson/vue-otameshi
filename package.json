@@ -6,6 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
-    "vue": "^3.0.5"
+    "chart.js": "2.7.1",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.5.1"
   }
 }
