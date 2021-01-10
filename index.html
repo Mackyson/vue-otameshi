@@ -14,6 +14,13 @@
 				</li>
 			</ol>
 			<button v-on:click="countup">+1</button>
+			<ul>
+				<todo-item
+					v-for="elm in todos"
+					v-bind:todo=elm
+					v-bind:key=elm.id
+					></todo-item>
+			</ul>
 		</div>
 		<script src="./index.js"></script>
 	</body>

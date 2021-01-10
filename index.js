@@ -16,5 +16,9 @@ const App = {
 	}
 }
 app = Vue.createApp(App)
+app.component("todo-item",{
+	props: ["todo"],
+	template: "<li>{{todo.text}}</li>"
+})
 
 app.mount("#app")
