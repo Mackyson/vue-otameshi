@@ -6,6 +6,13 @@
 	<body>
 		<div id="app">
 			{{ message }}
+			{{ count }}
+			<ul id>
+				<li v-for="elm in list" display="none">
+					{{elm.id}}
+				</li>
+			</ul>
+			<button v-on:click="countup">+1</button>
 		</div>
 		<script src="./index.js"></script>
 	</body>
